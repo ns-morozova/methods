@@ -1,7 +1,15 @@
-import { Bowman } from '../app.js';
+import Bowman from "../class/Bowman";
 
-test('class Bowman', () => {
-  const bowman = new Bowman('Bob');
-  expect(bowman.name).toBe('Bob');
-  expect(bowman.type).toBe('Bowman');
+test('Правильно создается объект', () => {
+  const bowman = new Bowman('Bowman');
+  const correct = {
+    attack: 25,
+    defence: 25,
+    health: 100,
+    level: 1,
+    name: 'Bowman',
+    type: 'Bowman'
+  };
+
+  expect(bowman).toEqual(correct);
 });

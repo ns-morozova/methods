@@ -1,7 +1,15 @@
-import { Magician } from '../app.js';
+import Magician from "../class/Magician";
 
-test('class Magician', () => {
-  const magician = new Magician('Maddy');
-  expect(magician.name).toBe('Maddy');
-  expect(magician.type).toBe('Magician');
+test('Правильно создается объект', () => {
+  const magician = new Magician('Magician');
+  const correct = {
+    attack: 10,
+    defence: 40,
+    health: 100,
+    level: 1,
+    name: 'Magician',
+    type: 'Magician'
+  };
+
+  expect(magician).toEqual(correct);
 });

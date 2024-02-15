@@ -1,7 +1,15 @@
-import { Swordsman } from '../app.js';
+import Swordsman from "../class/Swordsman";
 
-test('class Swordsman', () => {
-  const swordsman = new Swordsman('Sam');
-  expect(swordsman.name).toBe('Sam');
-  expect(swordsman.type).toBe('Swordsman');
+test('Правильно создается объект', () => {
+  const swordsman = new Swordsman('Swordsman');
+  const correct = {
+    attack: 40,
+    defence: 10,
+    health: 100,
+    level: 1,
+    name: 'Swordsman',
+    type: 'Swordsman'
+  };
+
+  expect(swordsman).toEqual(correct);
 });
